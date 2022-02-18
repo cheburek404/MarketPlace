@@ -41,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Проверка пользователя на статус администратора
+    public function isAdmin() {
+        return $this->is_admin === 1;
+    }
 }

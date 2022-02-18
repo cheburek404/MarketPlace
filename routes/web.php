@@ -14,9 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/panel', function () {
+    return view('layouts.panel');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// Админка
+Route::group(['middleware' => ['auth', 'isadmin'], 'namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin.'], function()
+{
+    Route::get('/home', 'HomeController@index')->name('home');
+
+
+    Route::resource('/categories', 'CategoryController');
+
+    Route::get('/products/restore/{id}', 'ProductController@restore')->name('products.restore');
+    Route::get('/products/trashed', 'ProductController@showTrashedProducts')->name('products.trashed');
+    Route::resource('/products', 'ProductController');
+});
