@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,8 +24,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 // log in for admin
-Route::group(['middleware' => ['role:admin']], function () {
-    Route::get('/admin_panel', function () {
-        return view('admin.home');
-    });
+Route::middleware(['role:admin'])->prefix('admin_panel')->group( function () {
+    Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index']);
 });
