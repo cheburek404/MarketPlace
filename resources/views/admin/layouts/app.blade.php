@@ -38,9 +38,6 @@
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="/home" class="nav-link">Home</a>
                 </li>
@@ -129,8 +126,8 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
-                        <li class="nav-item menu-open">
-                            <a href="#" class="nav-link active">
+                        <li class="nav-item">
+                            <a href="{{ route('adminPanel') }}" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>Main page</p>
                             </a>
@@ -139,21 +136,21 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
                                 <p>
-                                    Posts
+                                    Products
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('post.index') }}" class="nav-link">
+                                    <a href="{{ route('product.index') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>All posts</p>
+                                        <p>All products</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('post.create') }}" class="nav-link">
+                                    <a href="{{ route('product.create') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Add post</p>
+                                        <p>Add product</p>
                                     </a>
                                 </li>
                             </ul>

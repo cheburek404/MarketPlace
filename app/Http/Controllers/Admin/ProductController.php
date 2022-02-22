@@ -3,17 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Post;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
-class PostController extends Controller {
+class ProductController extends Controller {
     public function index() {
-        return view('admin.post.index');
+        return view('admin.product.index');
     }
 
 
     public function create() {
-        return view('admin.post.create');
+        return view('admin.product.create');
     }
 
     /**
@@ -30,10 +30,10 @@ class PostController extends Controller {
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Product  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Product $post)
     {
         //
     }
@@ -41,10 +41,10 @@ class PostController extends Controller {
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Product  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Product $post)
     {
         //
     }
@@ -53,10 +53,10 @@ class PostController extends Controller {
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Product  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Product $post)
     {
         //
     }
@@ -64,10 +64,10 @@ class PostController extends Controller {
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Product  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Product $post)
     {
         //
     }

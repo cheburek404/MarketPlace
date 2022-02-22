@@ -86,3 +86,9 @@
     color: #adb5bd;
     pointer-events: none;
     background-color: transparent; }
+
+/* Create page in Admin */
+.card{
+    width: 100%;
+    margin: 0 2% 0 2%;
+}
