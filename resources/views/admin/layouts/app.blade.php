@@ -18,7 +18,7 @@
     <!-- JQVMap -->
     <link rel="stylesheet" href="/admin/plugins/jqvmap/jqvmap.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="admin/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
@@ -28,15 +28,11 @@
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('admin/js/add.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('admin/js/add.js') }}"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-        <!-- Preloader -->
-        <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="https://cent.kz/images/logo.png" alt="AdminLTELogo" height="80" width="220">
-        </div>
 
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -149,13 +145,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="admin/posts/general.html" class="nav-link">
+                                    <a href="{{ route('post.index') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>All posts</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="admin/posts/general.html" class="nav-link">
+                                    <a href="{{ route('post.create') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Add post</p>
                                     </a>
@@ -305,18 +301,7 @@
                 </nav>
             </div>
         </aside>
-
-        <div class="content-wrapper">
-            <div class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1 class="m-0">Main page</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @yield('content');
+            @yield('content')
         </div>
 
     </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\PostController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 // log in for admin
-Route::middleware(['role:admin'])->prefix('admin_panel')->group( function () {
+Route::middleware(['role:admin'])->prefix('adminPanel')->group( function () {
     Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminPanel');
+
+    Route::resource('post', PostController::class);
 });
