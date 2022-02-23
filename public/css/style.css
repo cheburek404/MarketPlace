@@ -90,5 +90,49 @@
 /* Create page in Admin */
 .card{
     width: 100%;
-    margin: 0 2% 0 2%;
 }
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+.btn:hover {
+    color: #212529; }
+.btn-primary {
+    color: #000;
+    background-color: #599AFD;
+    border-color: #477BC9; }
+.btn-primary:hover {
+    color: #fff;
+    background-color: #599AFD;
+    border-color: #477BC9; }
+.btn-info {
+    color: #000;
+    background-color: #52CA86;
+    border-color: #3E9664; }
+.btn-info:hover {
+    color: #fff;
+    background-color: #52CA86;
+    border-color: #3E9664; }
+.btn-danger {
+    color: #000;
+    background-color: #FF5757;
+    border-color: #CC4545; }
+.btn-danger:hover {
+    color: #fff;
+    background-color: #FF5757;
+    border-color: #CC4545; }
