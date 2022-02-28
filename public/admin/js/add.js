@@ -9,10 +9,12 @@ $(document).ready(function () {
         }
     });
 
-   /*$('.delete-btn').click(function () {
-        var res = confirm('Подтвердите действия');
+   $('.delete-btn').click(function () {
+        var res = confirm('Confirm actions');
         if(!res){
             return false;
         }
-    });*/
+    });
 });
+
+

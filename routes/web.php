@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -28,5 +29,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware(['role:admin'])->prefix('adminPanel')->group( function () {
     Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminPanel');
 
+    Route::resource('category', CategoryController::class);
     Route::resource('product', ProductController::class);
 });

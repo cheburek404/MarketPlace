@@ -25,7 +25,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Title</label>
-                                    <input type="text" name="title" class="form-control" placeholder="Title">
+                                    <input type="text" name="title" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Description</label>
@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Price</label>
-                                    <input type="number" name="price" class="form-control" placeholder="Price">
+                                    <input type="number" name="price" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Categories</label>
