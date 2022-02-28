@@ -137,4 +137,8 @@
     background-color: #FF5757;
     border-color: #CC4545; }
 
-
+/* Alert */
+.alert{
+    border-radius: 0.5rem;
+    border-color: white;
+    background-color: #83F29D; }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -22,7 +23,10 @@ class ProductController extends Controller {
 
 
     public function create() {
-        return view('admin.product.create');
+        $categories = Category::orderBy('created_at', 'asc')->get();
+        return view('admin.product.create', [
+            'categories' => $categories
+        ]);
     }
 
     /**

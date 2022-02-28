@@ -38,10 +38,9 @@
                                 <div class="form-group">
                                     <label>Categories</label>
                                     <select class="form-control" name="category">
-                                        <option>Car</option>
-                                        <option>Health</option>
-                                        <option>Home</option>
-                                        <option>Tourism</option>
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category['id'] }}">{{ $category['name_of_category'] }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -52,6 +51,12 @@
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="feature_image">File input</label>
+                                    <img src="" alt="" class="img-uploaded" style="display: block; width: 300px">
+                                    <input type="text" name="image" class="form-control" id="feature_image" readonly>
+                                    <a href="" class="popup_selector btn btn-light mt-2" data-inputid="feature_image">Choose file</a>
                                 </div>
                             </div>
 
